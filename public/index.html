@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StoreTech</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-background font-sans">
+    <header
+      class="bg-surface max-w-7xl mt-9 mx-auto py-4 px-16 shadow-xl rounded-t-xl"
+    >
+      <div class="flex justify-between items-center">
+        <span class="font-bold text-2xl text-heading"
+          >Tech<span class="text-primary">Store</span></span
+        >
+        <nav class="">
+          <ul class="flex gap-16 text-heading font-bold">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div id="cart-wrapper" class="relative inline-flex group">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-shopping-cart preview-icon text-heading"
+          >
+            <path
+              d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18"
+            />
+            <path
+              d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25"
+            />
+            <circle cx="18" cy="20" r="2" />
+            <circle cx="8" cy="20" r="2" />
+          </svg>
+          <span
+            id="cart-count"
+            class="absolute text-surface bg-primary-dark text-xs rounded-full py-0.5 px-1 -right-2 -top-2"
+          >
+            0
+          </span>
+          <div
+            id="cart-dropdown"
+            class="absolute right-0 top-full z-50 w-96 rounded-xl border border-border bg-surface p-4 shadow-xl invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity"
+          ></div>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-7xl mx-auto shadow-xl">
+      <div class="bg-background pt-10 px-16 grid grid-cols-[1.1fr_0.9fr]">
+        <div class="flex flex-col gap-3">
+          <h1 class="text-heading text-5xl font-bold leading-tight">
+            Find the Right Tech for Everyday Life
+          </h1>
+          <p class="text-body text-xl leading-tight">
+            Shop quality electronics easily. From laptops and headphones to
+            smart devices, TechStore helps you find the perfect tech for work,
+            study, and play.
+          </p>
+          <form class="w-full my-7">
+            <div
+              class="flex items-center pl-2 bg-surface shadow-xs rounded-md border border-border -space-x-0.5"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-search preview-icon"
+              >
+                <path d="m21 21-4.34-4.34" />
+                <circle cx="11" cy="11" r="8" />
+              </svg>
+              <input
+                id="search-box"
+                type="search"
+                class="px-3 py-2.5 bg-surface text-heading text-sm block w-full outline-none placeholder:text-body"
+                placeholder="Search for laptops, headphones, smartphones..."
+              />
+              <button
+                id="button-search"
+                type="submit"
+                class="inline-flex items-center text-surface bg-primary hover:bg-primary-dark box-border border border-transparent focus:bg-primary-light focus:text-body shadow-xs font-medium leading-5 rounded-r-md text-sm px-4 py-2.5 focus:outline-none transition-colors"
+              >
+                Search
+              </button>
+            </div>
+          </form>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-truck preview-icon text-primary"
+              >
+                <path
+                  d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"
+                />
+                <path d="M15 18H9" />
+                <path
+                  d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"
+                />
+                <circle cx="17" cy="18" r="2" />
+                <circle cx="7" cy="18" r="2" />
+              </svg>
+              <div>
+                <p class="text-heading font-bold">Fast Shipping</p>
+                <p class="text-body text-xs">Get your order quickly</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-shield-check preview-icon text-primary"
+              >
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <div>
+                <p class="text-heading font-bold">Secure Payment</p>
+                <p class="text-body text-xs">Shop with confidence</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-headset preview-icon text-primary"
+              >
+                <path
+                  d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"
+                />
+                <path d="M21 16v2a4 4 0 0 1-4 4h-5" />
+              </svg>
+              <div>
+                <p class="text-heading font-bold">24/7 Support</p>
+                <p class="text-body text-xs">We're here to help</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-2">
+          <img
+            class="w-full"
+            src="./imgs/design-01m5g1q8ef-1792613813.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </main>
+    <section
+      class="bg-surface max-w-7xl mb-10 mx-auto py-4 px-16 shadow-xl rounded-b-xl"
+    >
+      <div class="flex justify-between items-center pb-6">
+        <h2 class="text-heading text-xl font-bold">Faetured Products</h2>
+        <a class="text-primary hover:text-primary-dark" href="#">
+          <span class="flex justify-between items-center gap-2 font-bold">
+            <p>View All</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right preview-icon"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+      </div>
+      <div id="products-container" class="grid grid-cols-3 gap-4"></div>
+    </section>
+    <script src="/public/js/app.js" defer></script>
+  </body>
+</html>
