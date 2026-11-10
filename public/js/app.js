@@ -5,7 +5,7 @@ const products = [
     id: 1,
     name: "MacBook Air M2",
     price: 999,
-    image: "./imgs/loptop.png",
+    image: "./imgs/laptop.png",
     category: "laptop",
   },
   {
